@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Dev Domain Masters | Hosting, Dominios y Desarrollo Web en El Salvador
+    </title>
+    <meta
+      name="description"
+      content="Servicios profesionales de hosting web, registro de dominios, correos empresariales y desarrollo web en El Salvador. Soporte técnico real y soluciones escalables."
+    />
+    <meta
+      name="keywords"
+      content="hosting El Salvador, dominios sv, desarrollo web, correo empresarial, hosting profesional"
+    />
+    <meta name="author" content="Dev Domain Masters" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://devdomainmasters.com" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Dev Domain Masters | Hosting y Desarrollo Web"
+    />
+    <meta
+      property="og:description"
+      content="Servicios profesionales de hosting, dominios y desarrollo web en El Salvador."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_SV" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@DevDomainMasters" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header" id="header">
+      <div class="container header-container">
+        <a href="#" class="logo">
+          <div class="logo-icon">DD</div>
+          <span class="logo-text"
+            >DEV DOMAIN <span class="text-gradient">MASTERS</span></span
+          >
+        </a>
+
+        <nav class="nav-desktop" aria-label="Navegación principal">
+          <a href="#servicios" class="nav-link">Servicios</a>
+          <a href="#propuesta" class="nav-link">Por qué elegirnos</a>
+          <a href="#proceso" class="nav-link">Proceso</a>
+          <a href="#nosotros" class="nav-link">Nosotros</a>
+        </nav>
+
+        <a href="#contacto" class="btn btn-primary btn-glow nav-cta"
+          >Solicitar cotización</a
+        >
+
+        <button
+          class="mobile-menu-btn"
+          id="mobileMenuBtn"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <i data-lucide="menu" class="menu-icon"></i>
+          <i data-lucide="x" class="close-icon hidden"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <nav
+        class="nav-mobile hidden"
+        id="mobileNav"
+        aria-label="Navegación móvil"
+      >
+        <div class="container">
+          <a href="#servicios" class="nav-link-mobile">Servicios</a>
+          <a href="#propuesta" class="nav-link-mobile">Por qué elegirnos</a>
+          <a href="#proceso" class="nav-link-mobile">Proceso</a>
+          <a href="#nosotros" class="nav-link-mobile">Nosotros</a>
+          <a href="#contacto" class="btn btn-primary w-full"
+            >Solicitar cotización</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero" id="inicio">
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
+
+        <div class="container hero-content">
+          <h1 class="hero-title">
+            Servicios de Hosting, Dominios y
+            <span class="text-gradient">Desarrollo Web</span>
+            en El Salvador
+          </h1>
+
+          <p class="hero-subtitle">
+            Impulsa tu negocio con soluciones digitales confiables. Hosting
+            veloz, dominios profesionales y desarrollo web a medida con soporte
+            técnico real.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#contacto" class="btn btn-primary btn-lg btn-glow">
+              Solicitar cotización
+              <i data-lucide="arrow-right"></i>
+            </a>
+            <a href="#servicios" class="btn btn-outline btn-lg"
+              >Ver servicios</a
+            >
+          </div>
+
+          <div class="trust-indicators">
+            <div class="trust-item">
+              <i data-lucide="shield" class="trust-icon"></i>
+              <span>SSL incluido</span>
+            </div>
+            <div class="trust-item">
+              <i data-lucide="zap" class="trust-icon"></i>
+              <span>99.9% uptime</span>
+            </div>
+            <div class="trust-item">
+              <i data-lucide="globe" class="trust-icon"></i>
+              <span>Soporte en español</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section class="section" id="servicios">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">
+              Servicios Digitales para tu
+              <span class="text-gradient">Negocio</span>
+            </h2>
+            <p class="section-subtitle">
+              Todo lo que necesitas para establecer y hacer crecer tu presencia
+              digital, con tecnología de punta y soporte técnico personalizado.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card">
+              <div class="service-icon">
+                <i data-lucide="server"></i>
+              </div>
+              <h3 class="service-title">Hosting Web</h3>
+              <p class="service-description">
+                Servidores optimizados con SSD, certificados SSL gratuitos y
+                panel de control intuitivo. Tu sitio siempre rápido y seguro.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">
+                <i data-lucide="globe"></i>
+              </div>
+              <h3 class="service-title">Registro de Dominios</h3>
+              <p class="service-description">
+                Registra tu dominio .com, .sv, .net y más de 400 extensiones.
+                Gestión DNS completa y renovación automática.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">
+                <i data-lucide="mail"></i>
+              </div>
+              <h3 class="service-title">Correos Empresariales</h3>
+              <p class="service-description">
+                Correo profesional con tu dominio. Sincronización móvil, filtros
+                antispam avanzados y almacenamiento amplio.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">
+                <i data-lucide="code"></i>
+              </div>
+              <h3 class="service-title">Desarrollo Web</h3>
+              <p class="service-description">
+                Sitios web y aplicaciones a medida. Diseño responsive,
+                optimizado para SEO y enfocado en conversión.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">
+                <i data-lucide="settings"></i>
+              </div>
+              <h3 class="service-title">Mantenimiento Web</h3>
+              <p class="service-description">
+                Actualizaciones de seguridad, backups automáticos y monitoreo
+                constante. Tu sitio siempre protegido.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">
+                <i data-lucide="cloud"></i>
+              </div>
+              <h3 class="service-title">Soluciones Cloud</h3>
+              <p class="service-description">
+                Infraestructura escalable para proyectos que crecen. Servidores
+                dedicados y configuraciones a medida.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Value Proposition Section -->
+      <section class="section section-alt" id="propuesta">
+        <div class="container">
+          <div class="value-grid">
+            <div class="value-content">
+              <h2 class="section-title text-left">
+                ¿Por qué elegir
+                <span class="text-gradient">Dev Domain Masters</span>?
+              </h2>
+              <p class="value-description">
+                No somos solo un proveedor de hosting. Somos tu aliado
+                tecnológico. Combinamos infraestructura robusta con atención
+                humana para que te concentres en lo que realmente importa: hacer
+                crecer tu negocio.
+              </p>
+              <ul class="value-list">
+                <li class="value-list-item">
+                  <i data-lucide="check-circle" class="value-check"></i>
+                  <span>Migración gratuita desde otros proveedores</span>
+                </li>
+                <li class="value-list-item">
+                  <i data-lucide="check-circle" class="value-check"></i>
+                  <span>Panel de control en español</span>
+                </li>
+                <li class="value-list-item">
+                  <i data-lucide="check-circle" class="value-check"></i>
+                  <span>Garantía de 30 días o devolución</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="value-cards">
+              <div class="value-card">
+                <div class="value-card-icon">
+                  <i data-lucide="headphones"></i>
+                </div>
+                <h3 class="value-card-title">Soporte Técnico Real</h3>
+                <p class="value-card-description">
+                  Atención personalizada por personas reales, no bots. Respuesta
+                  en menos de 2 horas en horario laboral.
+                </p>
+              </div>
+
+              <div class="value-card">
+                <div class="value-card-icon">
+                  <i data-lucide="trending-up"></i>
+                </div>
+                <h3 class="value-card-title">Infraestructura Escalable</h3>
+                <p class="value-card-description">
+                  Crece sin preocuparte. Nuestros planes se adaptan al ritmo de
+                  tu negocio sin migraciones complicadas.
+                </p>
+              </div>
+
+              <div class="value-card">
+                <div class="value-card-icon">
+                  <i data-lucide="lock"></i>
+                </div>
+                <h3 class="value-card-title">Seguridad Garantizada</h3>
+                <p class="value-card-description">
+                  SSL gratuito, backups diarios automatizados y monitoreo 24/7
+                  para proteger tu inversión digital.
+                </p>
+              </div>
+
+              <div class="value-card">
+                <div class="value-card-icon">
+                  <i data-lucide="check-circle"></i>
+                </div>
+                <h3 class="value-card-title">Sin Costos Ocultos</h3>
+                <p class="value-card-description">
+                  Precios claros desde el inicio. Sin sorpresas, sin letras
+                  pequeñas. Facturación transparente.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process Section -->
+      <section class="section" id="proceso">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">
+              Cómo <span class="text-gradient">Trabajamos</span>
+            </h2>
+            <p class="section-subtitle">
+              Un proceso simple y transparente. Sin complicaciones, enfocado en
+              resultados y en tu satisfacción.
+            </p>
+          </div>
+
+          <div class="process-grid">
+            <div class="process-step">
+              <div class="process-icon-wrapper">
+                <div class="process-icon-box">
+                  <i data-lucide="message-square"></i>
+                </div>
+                <span class="process-number">01</span>
+              </div>
+              <h3 class="process-title">Consulta Inicial</h3>
+              <p class="process-description">
+                Conversamos para entender tu proyecto, objetivos y necesidades
+                técnicas específicas.
+              </p>
+            </div>
+
+            <div class="process-step">
+              <div class="process-icon-wrapper">
+                <div class="process-icon-box">
+                  <i data-lucide="file-text"></i>
+                </div>
+                <span class="process-number">02</span>
+              </div>
+              <h3 class="process-title">Propuesta Personalizada</h3>
+              <p class="process-description">
+                Recibís una propuesta clara con opciones, tiempos y precios. Sin
+                compromiso.
+              </p>
+            </div>
+
+            <div class="process-step">
+              <div class="process-icon-wrapper">
+                <div class="process-icon-box">
+                  <i data-lucide="rocket"></i>
+                </div>
+                <span class="process-number">03</span>
+              </div>
+              <h3 class="process-title">Implementación</h3>
+              <p class="process-description">
+                Configuramos todo por vos. Migración, dominio, hosting y
+                desarrollo listos para usar.
+              </p>
+            </div>
+
+            <div class="process-step">
+              <div class="process-icon-wrapper">
+                <div class="process-icon-box">
+                  <i data-lucide="life-buoy"></i>
+                </div>
+                <span class="process-number">04</span>
+              </div>
+              <h3 class="process-title">Soporte Continuo</h3>
+              <p class="process-description">
+                No te dejamos solo. Soporte técnico permanente y asesoría para
+                que sigas creciendo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="section section-alt" id="nosotros">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-content">
+              <h2 class="section-title text-left">
+                Sobre <span class="text-gradient">Nosotros</span>
+              </h2>
+              <p class="about-text">
+                <strong>Dev Domain Masters</strong> nace de la necesidad de
+                ofrecer servicios digitales de calidad en El Salvador y
+                Latinoamérica. Somos un equipo de profesionales apasionados por
+                la tecnología, con experiencia real en hosting, desarrollo web y
+                soluciones empresariales.
+              </p>
+              <p class="about-text">
+                Creemos que cada negocio merece una presencia digital sólida,
+                sin complicaciones técnicas ni proveedores impersonales. Por eso
+                combinamos tecnología de primer nivel con atención cercana y
+                personalizada.
+              </p>
+              <p class="about-text">
+                Nuestro compromiso es simple:
+                <strong
+                  >ser el aliado tecnológico que tu negocio necesita</strong
+                >.
+              </p>
+            </div>
+
+            <div class="about-stats">
+              <div class="stat-card">
+                <span class="stat-number text-gradient">+500</span>
+                <span class="stat-label">Proyectos completados</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number text-gradient">99.9%</span>
+                <span class="stat-label">Uptime garantizado</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number text-gradient">24/7</span>
+                <span class="stat-label">Monitoreo activo</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number text-gradient">+5</span>
+                <span class="stat-label">Años de experiencia</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="section" id="contacto">
+        <div class="container">
+          <div class="contact-grid">
+            <div class="contact-info">
+              <h2 class="section-title text-left">
+                ¿Listo para <span class="text-gradient">empezar</span>?
+              </h2>
+              <p class="contact-description">
+                Contanos sobre tu proyecto y te responderemos en menos de 24
+                horas con una propuesta personalizada. Sin compromiso, sin
+                presiones.
+              </p>
+
+              <div class="contact-details">
+                <div class="contact-item">
+                  <div class="contact-item-icon">
+                    <i data-lucide="mail"></i>
+                  </div>
+                  <div>
+                    <p class="contact-item-label">Correo electrónico</p>
+                    <a
+                      href="mailto:hola@devdomainmasters.com"
+                      class="contact-item-value"
+                      >hola@devdomainmasters.com</a
+                    >
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-item-icon">
+                    <i data-lucide="message-circle"></i>
+                  </div>
+                  <div>
+                    <p class="contact-item-label">WhatsApp</p>
+                    <a
+                      href="https://wa.me/50312345678"
+                      class="contact-item-value"
+                      >+503 1234-5678</a
+                    >
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-item-icon">
+                    <i data-lucide="clock"></i>
+                  </div>
+                  <div>
+                    <p class="contact-item-label">Horario de atención</p>
+                    <p class="contact-item-value">
+                      Lunes a Viernes, 8:00 AM - 6:00 PM
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-form-wrapper">
+              <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                  <label for="name" class="form-label">Nombre completo</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-input"
+                    placeholder="Tu nombre"
+                    required
+                  />
+                  <span class="form-error" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="email" class="form-label"
+                    >Correo electrónico</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-input"
+                    placeholder="tu@correo.com"
+                    required
+                  />
+                  <span class="form-error" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="message" class="form-label">Mensaje</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form-textarea"
+                    placeholder="Contanos sobre tu proyecto o necesidad..."
+                    rows="5"
+                    required
+                  ></textarea>
+                  <span class="form-error" id="messageError"></span>
+                </div>
+
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-lg btn-glow w-full"
+                >
+                  <i data-lucide="send"></i>
+                  Enviar mensaje
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#" class="logo">
+              <div class="logo-icon">DD</div>
+              <span class="logo-text"
+                >DEV DOMAIN <span class="text-gradient">MASTERS</span></span
+              >
+            </a>
+            <p class="footer-description">
+              Tu aliado tecnológico en El Salvador. Hosting, dominios y
+              desarrollo web con soporte real.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <h4 class="footer-title">Servicios</h4>
+            <ul>
+              <li><a href="#servicios">Hosting Web</a></li>
+              <li><a href="#servicios">Dominios</a></li>
+              <li><a href="#servicios">Correos Empresariales</a></li>
+              <li><a href="#servicios">Desarrollo Web</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h4 class="footer-title">Empresa</h4>
+            <ul>
+              <li><a href="#nosotros">Sobre Nosotros</a></li>
+              <li><a href="#proceso">Proceso</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h4 class="footer-title">Contacto</h4>
+            <ul>
+              <li>
+                <a href="mailto:hola@devdomainmasters.com"
+                  >hola@devdomainmasters.com</a
+                >
+              </li>
+              <li><a href="https://wa.me/50312345678">+503 1234-5678</a></li>
+              <li>San Salvador, El Salvador</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2024 Dev Domain Masters. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast hidden" id="toast">
+      <i data-lucide="check-circle" class="toast-icon"></i>
+      <span class="toast-message">Mensaje enviado correctamente</span>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
