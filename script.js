@@ -5,7 +5,30 @@
 
 document.addEventListener('DOMContentLoaded', function() {
   // Initialize Lucide icons
-  lucide.createIcons();
+    lucide.createIcons();
+    
+      // ==================== FAQ ACCORDION ====================
+  const faqItems = document.querySelectorAll('.faq-item');
+  
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    
+    question.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      
+      // Close all other items
+      faqItems.forEach(otherItem => {
+        otherItem.classList.remove('open');
+        otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+      
+      // Toggle current item
+      if (!isOpen) {
+        item.classList.add('open');
+        question.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
 
   // ==================== MOBILE MENU ====================
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
