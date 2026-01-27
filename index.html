@@ -47,6 +47,30 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Dev Domain Masters",
+      "url": "https://devdomainmasters.com",
+      "logo": "https://devdomainmasters.com/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "hola@devdomainmasters.com",
+        "telephone": "+50312345678",
+        "areaServed": "SV",
+        "availableLanguage": ["Spanish"]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "SV",
+        "addressLocality": "San Salvador"
+      },
+      "sameAs": []
+    }
+    </script>
+
   </head>
   <body>
     <!-- Header -->
@@ -107,10 +131,13 @@
 
         <div class="container hero-content">
           <h1 class="hero-title">
-            Servicios de Hosting, Dominios y
-            <span class="text-gradient">Desarrollo Web</span>
-            en El Salvador
+            Hosting Profesional, Dominios y
+            <span class="text-gradient">Desarrollo Web en El Salvador</span>
           </h1>
+
+         <p class="hero-location">
+                Servicios digitales para empresas y emprendedores en <strong>El Salvador</strong> y Latinoamérica.
+         </p>    
 
           <p class="hero-subtitle">
             Impulsa tu negocio con soluciones digitales confiables. Hosting
@@ -164,7 +191,7 @@
               <div class="service-icon">
                 <i data-lucide="server"></i>
               </div>
-              <h3 class="service-title">Hosting Web</h3>
+              <h3 class="service-title">Hosting Web Profesional</h3>
               <p class="service-description">
                 Servidores optimizados con SSD, certificados SSL gratuitos y
                 panel de control intuitivo. Tu sitio siempre rápido y seguro.
@@ -175,7 +202,7 @@
               <div class="service-icon">
                 <i data-lucide="globe"></i>
               </div>
-              <h3 class="service-title">Registro de Dominios</h3>
+              <h3 class="service-title">Registro de Dominios en El Salvador</h3>
               <p class="service-description">
                 Registra tu dominio .com, .sv, .net y más de 400 extensiones.
                 Gestión DNS completa y renovación automática.
@@ -186,7 +213,7 @@
               <div class="service-icon">
                 <i data-lucide="mail"></i>
               </div>
-              <h3 class="service-title">Correos Empresariales</h3>
+              <h3 class="service-title">Correo Empresarial con Dominio Propio</h3>
               <p class="service-description">
                 Correo profesional con tu dominio. Sincronización móvil, filtros
                 antispam avanzados y almacenamiento amplio.
@@ -197,7 +224,7 @@
               <div class="service-icon">
                 <i data-lucide="code"></i>
               </div>
-              <h3 class="service-title">Desarrollo Web</h3>
+              <h3 class="service-title">Desarrollo Web Profesional</h3>
               <p class="service-description">
                 Sitios web y aplicaciones a medida. Diseño responsive,
                 optimizado para SEO y enfocado en conversión.
@@ -208,7 +235,7 @@
               <div class="service-icon">
                 <i data-lucide="settings"></i>
               </div>
-              <h3 class="service-title">Mantenimiento Web</h3>
+              <h3 class="service-title">Mantenimiento y Soporte Web</h3>
               <p class="service-description">
                 Actualizaciones de seguridad, backups automáticos y monitoreo
                 constante. Tu sitio siempre protegido.
@@ -219,7 +246,7 @@
               <div class="service-icon">
                 <i data-lucide="cloud"></i>
               </div>
-              <h3 class="service-title">Soluciones Cloud</h3>
+              <h3 class="service-title">Soluciones Cloud Escalables</h3>
               <p class="service-description">
                 Infraestructura escalable para proyectos que crecen. Servidores
                 dedicados y configuraciones a medida.
@@ -265,10 +292,10 @@
                 <div class="value-card-icon">
                   <i data-lucide="headphones"></i>
                 </div>
-                <h3 class="value-card-title">Soporte Técnico Real</h3>
+                <h3 class="value-card-title">Soporte Técnico Real y Local</h3>
                 <p class="value-card-description">
                   Atención personalizada por personas reales, no bots. Respuesta
-                  en menos de 2 horas en horario laboral.
+                  por agentes locales en menos de 2 horas en horario laboral.
                 </p>
               </div>
 
@@ -413,7 +440,7 @@
 
             <div class="about-stats">
               <div class="stat-card">
-                <span class="stat-number text-gradient">+500</span>
+                <span class="stat-number text-gradient">+10</span>
                 <span class="stat-label">Proyectos completados</span>
               </div>
               <div class="stat-card">
@@ -426,7 +453,7 @@
               </div>
               <div class="stat-card">
                 <span class="stat-number text-gradient">+5</span>
-                <span class="stat-label">Años de experiencia</span>
+                <span class="stat-label">Experiencia en proyectos empresariales y pymes</span>
               </div>
             </div>
           </div>
@@ -547,6 +574,14 @@
       </section>
     </main>
 
+    <section class="sr-only" >
+        <h2>Preguntas frecuentes</h2>
+        <p><strong>¿Ofrecen hosting en El Salvador?</strong> Sí, ofrecemos hosting profesional optimizado para empresas y
+            emprendedores en El Salvador.</p>
+        <p><strong>¿Incluyen dominio y correo empresarial?</strong> Sí, ofrecemos registro de dominios y correos
+            empresariales con dominio propio.</p>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
@@ -598,7 +633,7 @@
         </div>
 
         <div class="footer-bottom">
-          <p>&copy; 2024 Dev Domain Masters. Todos los derechos reservados.</p>
+          <p>&copy; <span id="currentYear"></span> Dev Domain Masters. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
