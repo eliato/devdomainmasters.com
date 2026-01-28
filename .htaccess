@@ -1,7 +1,1 @@
 RewriteEngine On
-
-# Redirigir explícitamente hosting.html → /hosting
-RewriteRule ^hosting\.html$ /hosting [R=301,L]
-
-# Servir hosting.html cuando se accede a /hosting
-RewriteRule ^hosting$ /hosting.html [L]
