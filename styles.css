@@ -89,7 +89,7 @@ body {
     display: none !important;
 }
 
-.withouta {
+a.withouta {
     text-decoration: none;
     color: inherit;
 }
