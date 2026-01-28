@@ -89,6 +89,11 @@ body {
     display: none !important;
 }
 
+.withouta {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* -------------------- BUTTONS -------------------- */
 .btn {
     display: inline-flex;
