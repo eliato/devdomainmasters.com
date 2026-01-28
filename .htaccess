@@ -1,19 +1,11 @@
 RewriteEngine On
 RewriteBase /
 
-# 1. Forzar HTTPS (Método estándar compatible con la mayoría de hostings)
-RewriteCond %{HTTPS} off
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# 2. Forzar WWW (Solo si no la tiene ya)
-RewriteCond %{HTTP_HOST} !^www\. [NC]
-RewriteRule ^ https://www.devdomainmasters.com%{REQUEST_URI} [L,R=301]
-
-# 3. Eliminar .html de la URL (Redirección externa)
+# 1. Si el usuario pide algo.html, quitarle el .html visualmente
 RewriteCond %{THE_REQUEST} \s/+(.+)\.html [NC]
-RewriteRule ^(.+)\.html$ /$1 [R=301,L,NE]
+RewriteRule ^(.+)\.html$ /$1 [R=301,L]
 
-# 4. Servir el archivo .html (Mapeo interno)
+# 2. Si el usuario pide la ruta limpia, mostrarle el archivo .html internamente
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^([^/]+)/?$ $1.html [L]
