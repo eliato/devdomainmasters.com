@@ -1,10 +1,7 @@
 RewriteEngine On
 
-# 1. Redirigir .html a URL limpia (301)
-RewriteCond %{THE_REQUEST} \s/([^\s]+)\.html [NC]
-RewriteRule ^ %1 [R=301,L]
+# Redirigir explícitamente hosting.html → /hosting
+RewriteRule ^hosting\.html$ /hosting [R=301,L]
 
-# 2. Servir archivos .html cuando no se especifica extensión
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^([^/]+)/?$ $1.html [L]
-
+# Servir hosting.html cuando se accede a /hosting
+RewriteRule ^hosting$ /hosting.html [L]
