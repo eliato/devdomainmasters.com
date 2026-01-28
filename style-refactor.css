@@ -1,10 +1,9 @@
 /* ================================================
    DEV DOMAIN MASTERS - STYLES
-   Landing Page CSS - Versión Estática
+   Landing Page CSS (Conservative Refactor)
    ================================================ */
 
-
-/* -------------------- RESET & BASE -------------------- */
+/* -------------------- RESET -------------------- */
 *,
 *::before,
 *::after {
@@ -13,8 +12,8 @@
     padding: 0;
 }
 
+/* -------------------- VARIABLES -------------------- */
 :root {
-    /* Colors */
     --background: hsl(222, 47%, 6%);
     --foreground: hsl(210, 40%, 98%);
     --card: hsl(222, 47%, 8%);
@@ -30,25 +29,21 @@
     --border: hsl(217, 33%, 17%);
     --ring: hsl(199, 89%, 48%);
 
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(222, 47%, 6%) 0%, hsl(217, 50%, 10%) 50%, hsl(222, 47%, 6%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(217, 33%, 12%) 0%, hsl(222, 47%, 8%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(199, 89%, 48%) 0%, hsl(172, 66%, 50%) 100%);
-    --gradient-text: linear-gradient(135deg, hsl(199, 89%, 60%) 0%, hsl(172, 66%, 60%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(222, 47%, 6%), hsl(217, 50%, 10%), hsl(222, 47%, 6%));
+    --gradient-card: linear-gradient(180deg, hsl(217, 33%, 12%), hsl(222, 47%, 8%));
+    --gradient-accent: linear-gradient(135deg, hsl(199, 89%, 48%), hsl(172, 66%, 50%));
+    --gradient-text: linear-gradient(135deg, hsl(199, 89%, 60%), hsl(172, 66%, 60%));
 
-    /* Shadows */
-    --glow-primary: 0 0 40px hsla(199, 89%, 48%, 0.3);
-    --glow-accent: 0 0 60px hsla(172, 66%, 50%, 0.2);
-    --shadow-soft: 0 4px 20px hsla(0, 0%, 0%, 0.3);
-    --shadow-card: 0 8px 32px hsla(0, 0%, 0%, 0.4);
+    --glow-primary: 0 0 40px hsla(199, 89%, 48%, .3);
+    --glow-accent: 0 0 60px hsla(172, 66%, 50%, .2);
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, .3);
+    --shadow-card: 0 8px 32px rgba(0, 0, 0, .4);
 
-    /* Spacing */
-    --radius: 0.75rem;
-
-    /* Font */
+    --radius: .75rem;
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
+/* -------------------- BASE -------------------- */
 html {
     scroll-behavior: smooth;
 }
@@ -60,33 +55,6 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-
-/* -------------------- UTILITIES -------------------- */
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-}
-
-.text-gradient {
-    background: var(--gradient-text);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.text-left {
-    text-align: left;
-}
-
-.w-full {
-    width: 100%;
-}
-
-.hidden {
-    display: none !important;
 }
 
 /* -------------------- BUTTONS -------------------- */
@@ -139,6 +107,8 @@ body {
 }
 
 /* -------------------- HEADER -------------------- */
+
+/* Base header */
 .header {
     position: fixed;
     top: 0;
@@ -150,6 +120,7 @@ body {
     border-bottom: 1px solid var(--border);
 }
 
+/* Header layout */
 .header-container {
     display: flex;
     align-items: center;
@@ -157,12 +128,7 @@ body {
     height: 4rem;
 }
 
-@media (min-width: 768px) {
-    .header-container {
-        height: 5rem;
-    }
-}
-
+/* -------------------- BRAND / LOGO -------------------- */
 .logo {
     display: flex;
     align-items: center;
@@ -189,16 +155,11 @@ body {
     color: var(--foreground);
 }
 
+/* -------------------- DESKTOP NAV -------------------- */
 .nav-desktop {
     display: none;
     align-items: center;
     gap: 2rem;
-}
-
-@media (min-width: 768px) {
-    .nav-desktop {
-        display: flex;
-    }
 }
 
 .nav-link {
@@ -213,16 +174,12 @@ body {
     color: var(--foreground);
 }
 
+/* Desktop CTA */
 .nav-cta {
     display: none;
 }
 
-@media (min-width: 768px) {
-    .nav-cta {
-        display: inline-flex;
-    }
-}
-
+/* -------------------- MOBILE MENU BUTTON -------------------- */
 .mobile-menu-btn {
     display: flex;
     align-items: center;
@@ -234,17 +191,12 @@ body {
     cursor: pointer;
 }
 
-@media (min-width: 768px) {
-    .mobile-menu-btn {
-        display: none;
-    }
-}
-
 .mobile-menu-btn i {
     width: 1.5rem;
     height: 1.5rem;
 }
 
+/* -------------------- MOBILE NAV -------------------- */
 .nav-mobile {
     background: var(--card);
     border-top: 1px solid var(--border);
@@ -270,7 +222,11 @@ body {
     color: var(--foreground);
 }
 
+
+
 /* -------------------- HERO SECTION -------------------- */
+
+/* Base hero container */
 .hero {
     position: relative;
     min-height: 100vh;
@@ -281,6 +237,7 @@ body {
     overflow: hidden;
 }
 
+/* -------------------- HERO GLOW -------------------- */
 .hero-glow {
     position: absolute;
     border-radius: 50%;
@@ -305,6 +262,7 @@ body {
     animation-delay: 1.5s;
 }
 
+/* Glow animation */
 @keyframes glow-pulse {
 
     0%,
@@ -317,6 +275,7 @@ body {
     }
 }
 
+/* -------------------- HERO CONTENT -------------------- */
 .hero-content {
     position: relative;
     z-index: 10;
@@ -326,6 +285,7 @@ body {
     margin: 0 auto;
 }
 
+/* Title */
 .hero-title {
     font-size: 2.25rem;
     font-weight: 800;
@@ -334,21 +294,10 @@ body {
     letter-spacing: -0.025em;
 }
 
-@media (min-width: 768px) {
-    .hero-title {
-        font-size: 3rem;
-    }
-}
-
-@media (min-width: 1024px) {
-    .hero-title {
-        font-size: 3.75rem;
-    }
-}
-.hero-location{
+/* Location line */
+.hero-location {
     font-size: 1.5rem;
     font-weight: 600;
-    line-height: 1;
     color: var(--muted-foreground);
     margin-bottom: 2rem;
     max-width: 42rem;
@@ -357,7 +306,7 @@ body {
     line-height: 1.6;
 }
 
-
+/* Subtitle */
 .hero-subtitle {
     font-size: 1.125rem;
     color: var(--muted-foreground);
@@ -368,12 +317,7 @@ body {
     line-height: 1.7;
 }
 
-@media (min-width: 768px) {
-    .hero-subtitle {
-        font-size: 1.25rem;
-    }
-}
-
+/* Buttons */
 .hero-buttons {
     display: flex;
     flex-direction: column;
@@ -382,24 +326,12 @@ body {
     margin-bottom: 3rem;
 }
 
-@media (min-width: 640px) {
-    .hero-buttons {
-        flex-direction: row;
-    }
-    
-}
-
+/* -------------------- TRUST INDICATORS -------------------- */
 .trust-indicators {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem;
-}
-
-@media (min-width: 768px) {
-    .trust-indicators {
-        gap: 2.5rem;
-    }
 }
 
 .trust-item {
@@ -417,26 +349,26 @@ body {
     color: var(--primary);
 }
 
+
 /* -------------------- SECTIONS -------------------- */
+
+/* Base section spacing */
 .section {
     padding: 5rem 0;
 }
 
-@media (min-width: 768px) {
-    .section {
-        padding: 7rem 0;
-    }
-}
-
+/* Alternate section background */
 .section-alt {
     background: var(--card);
 }
 
+/* Section header wrapper */
 .section-header {
     text-align: center;
     margin-bottom: 3.5rem;
 }
 
+/* Section title */
 .section-title {
     font-size: 1.875rem;
     font-weight: 700;
@@ -444,12 +376,7 @@ body {
     letter-spacing: -0.025em;
 }
 
-@media (min-width: 768px) {
-    .section-title {
-        font-size: 2.25rem;
-    }
-}
-
+/* Section subtitle */
 .section-subtitle {
     color: var(--muted-foreground);
     font-size: 1.125rem;
@@ -459,36 +386,21 @@ body {
 }
 
 /* -------------------- SERVICES -------------------- */
+
+/* Services grid */
 .services-grid {
     display: grid;
     gap: 1.5rem;
 }
 
-@media (min-width: 768px) {
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
-    .services-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
+/* Service card */
 .service-card {
     padding: 1.5rem;
     border-radius: var(--radius);
     background: var(--gradient-card);
     border: 1px solid var(--border);
-    transition: all 0.3s ease;
     box-shadow: var(--shadow-soft);
-}
-
-@media (min-width: 768px) {
-    .service-card {
-        padding: 2rem;
-    }
+    transition: all 0.3s ease;
 }
 
 .service-card:hover {
@@ -496,6 +408,7 @@ body {
     box-shadow: var(--shadow-card);
 }
 
+/* Service icon */
 .service-icon {
     width: 3rem;
     height: 3rem;
@@ -523,6 +436,7 @@ body {
     color: var(--primary-foreground);
 }
 
+/* Service content */
 .service-title {
     font-size: 1.25rem;
     font-weight: 600;
@@ -536,19 +450,15 @@ body {
 }
 
 /* -------------------- VALUE PROPOSITION -------------------- */
+
+/* Layout */
 .value-grid {
     display: grid;
     gap: 3rem;
     align-items: center;
 }
 
-@media (min-width: 1024px) {
-    .value-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-    }
-}
-
+/* -------------------- TEXT CONTENT -------------------- */
 .value-description {
     color: var(--muted-foreground);
     font-size: 1.125rem;
@@ -577,15 +487,10 @@ body {
     flex-shrink: 0;
 }
 
+/* -------------------- VALUE CARDS -------------------- */
 .value-cards {
     display: grid;
     gap: 1.25rem;
-}
-
-@media (min-width: 640px) {
-    .value-cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 .value-card {
@@ -600,6 +505,7 @@ body {
     border-color: hsla(199, 89%, 48%, 0.3);
 }
 
+/* Card icon */
 .value-card-icon {
     width: 2.5rem;
     height: 2.5rem;
@@ -617,6 +523,7 @@ body {
     color: var(--primary);
 }
 
+/* Card text */
 .value-card-title {
     font-size: 1.125rem;
     font-weight: 600;
@@ -631,27 +538,19 @@ body {
 }
 
 /* -------------------- PROCESS -------------------- */
+
+/* Layout */
 .process-grid {
     display: grid;
     gap: 2rem;
 }
 
-@media (min-width: 768px) {
-    .process-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
-    .process-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
+/* -------------------- PROCESS STEP -------------------- */
 .process-step {
     text-align: center;
 }
 
+/* Icon wrapper */
 .process-icon-wrapper {
     position: relative;
     display: inline-flex;
@@ -660,6 +559,7 @@ body {
     margin-bottom: 1.5rem;
 }
 
+/* Icon box */
 .process-icon-box {
     width: 6rem;
     height: 6rem;
@@ -678,6 +578,7 @@ body {
     color: var(--primary);
 }
 
+/* Step number */
 .process-number {
     position: absolute;
     top: -0.5rem;
@@ -694,6 +595,7 @@ body {
     justify-content: center;
 }
 
+/* Text content */
 .process-title {
     font-size: 1.25rem;
     font-weight: 600;
@@ -713,12 +615,7 @@ body {
     align-items: start;
 }
 
-@media (min-width: 1024px) {
-    .about-grid {
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 4rem;
-    }
-}
+
 
 .about-text {
     color: var(--muted-foreground);
@@ -757,73 +654,6 @@ body {
     font-size: 0.875rem;
 }
 
-/* -------------------- FAQ SECTION -------------------- */
-.container-narrow {
-    max-width: 800px;
-}
-
-.faq-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.faq-item {
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    background: rgba(255, 255, 255, 0.02);
-    backdrop-filter: blur(10px);
-    overflow: hidden;
-}
-
-.faq-question {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.25rem 1.5rem;
-    background: transparent;
-    border: none;
-    color: var(--foreground);
-    font-family: var(--font-sans);
-    font-size: 1rem;
-    font-weight: 500;
-    text-align: left;
-    cursor: pointer;
-    transition: color 0.2s ease;
-}
-
-.faq-question:hover {
-    color: var(--primary);
-}
-
-.faq-icon {
-    width: 1.25rem;
-    height: 1.25rem;
-    transition: transform 0.3s ease;
-    flex-shrink: 0;
-    margin-left: 1rem;
-}
-
-.faq-item.open .faq-icon {
-    transform: rotate(180deg);
-}
-
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-}
-
-.faq-item.open .faq-answer {
-    max-height: 200px;
-}
-
-.faq-answer p {
-    padding: 0 1.5rem 1.25rem;
-    color: var(--muted-foreground);
-    line-height: 1.6;
-}
 
 /* -------------------- CONTACT -------------------- */
 .contact-grid {
@@ -831,12 +661,6 @@ body {
     gap: 3rem;
 }
 
-@media (min-width: 1024px) {
-    .contact-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-    }
-}
 
 .contact-description {
     color: var(--muted-foreground);
@@ -957,6 +781,7 @@ body {
     min-height: 1rem;
 }
 
+
 /* -------------------- FOOTER -------------------- */
 .footer {
     background: var(--card);
@@ -971,15 +796,11 @@ body {
 }
 
 @media (min-width: 768px) {
-    .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+   
 }
 
 @media (min-width: 1024px) {
-    .footer-grid {
-        grid-template-columns: 2fr 1fr 1fr 1.5fr;
-    }
+   
 }
 
 .footer-brand .logo {
@@ -1032,6 +853,74 @@ body {
     font-size: 0.875rem;
 }
 
+/* -------------------- FAQ SECTION -------------------- */
+.container-narrow {
+    max-width: 800px;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faq-item {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    background: transparent;
+    border: none;
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.faq-question:hover {
+    color: var(--primary);
+}
+
+.faq-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 1rem;
+}
+
+.faq-item.open .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-item.open .faq-answer {
+    max-height: 200px;
+}
+
+.faq-answer p {
+    padding: 0 1.5rem 1.25rem;
+    color: var(--muted-foreground);
+    line-height: 1.6;
+}
+
 /* -------------------- TOAST -------------------- */
 .toast {
     position: fixed;
@@ -1073,41 +962,112 @@ body {
     color: var(--foreground);
 }
 
-/* -------------------- RESPONSIVE -------------------- */
-@media (max-width: 640px) {
-    .hero-buttons .btn {
-        width: 100%;
-    }
-    .hero-location {
-        font-size: 1.5rem;
-        font-weight: 600;
-        line-height: 1;
-        color: var(--muted-foreground);
-        margin-bottom: 2rem;
-        max-width: 42rem;
-        margin-left: 10px;
-        margin-right: 10px;
-        line-height: 1.5;
-    }
+/* -------------------- MEDIA QUERIES RESPONSIVE -------------------- */
 
-
-    .hero-subtitle {
-        font-size: 1.125rem;
-        color: var(--muted-foreground);
-        margin-bottom: 2rem;
-        max-width: 42rem;
-        margin-left: 10px;
-        margin-right: 10px;
-        line-height: 1.7;
-    }
-
+/* ≥ 640px (tablet small) */
+@media (min-width: 640px) {
     .hero-buttons {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        justify-content: center;
-        margin-bottom: 3rem;
-        margin-left: 20px;
-        margin-right: 20px;
+        flex-direction: row;
+    }
+
+    .value-cards {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
+
+/* ≥ 768px (tablet) */
+@media (min-width: 768px) {
+
+/* HEADER ADJUSTMENTS */
+    .header-container {
+        height: 5rem;
+    }
+
+    .nav-desktop {
+        display: flex;
+    }
+
+    .nav-cta {
+        display: inline-flex;
+    }
+
+    .mobile-menu-btn {
+        display: none;
+    }
+
+/* HERO ADJUSTMENTS */
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+
+    .trust-indicators {
+        gap: 2.5rem;
+    }
+
+    /* SECTION ADJUSTMENTS */
+  .section {
+      padding: 7rem 0;
+  }
+
+  .section-title {
+      font-size: 2.25rem;
+  }
+
+  /* SERVICES GRID ADJUSTMENTS */
+   .services-grid {
+       grid-template-columns: repeat(2, 1fr);
+   }
+
+   .service-card {
+       padding: 2rem;
+   }
+/* PROCESS GRID ADJUSTMENTS */
+   .process-grid {
+       grid-template-columns: repeat(2, 1fr);
+   }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ≥ 1024px (desktop) */
+@media (min-width: 1024px) {
+    .hero-title {
+        font-size: 3.75rem;
+    }
+
+/* SERVICES GRID ADJUSTMENTS */
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+/* VALUE PROPOSITION ADJUSTMENTS */
+    .value-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .about-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 4rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+
+         .footer-grid {
+             grid-template-columns: 2fr 1fr 1fr 1.5fr;
+         }
+}
+
+
