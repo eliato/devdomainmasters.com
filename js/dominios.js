@@ -9,19 +9,11 @@ document.addEventListener('DOMContentLoaded', function() {
     lucide.createIcons();
   }
 
-  // Mobile Menu Toggle
+  // Initialize all modules
   initMobileMenu();
-  
-  // Smooth Scroll for anchor links
   initSmoothScroll();
-  
-  // FAQ Accordion
   initFAQ();
-  
-  // Scroll animations
   initScrollAnimations();
-  
-  // Header scroll effect
   initHeaderScroll();
 });
 
@@ -30,21 +22,19 @@ document.addEventListener('DOMContentLoaded', function() {
  */
 function initMobileMenu() {
   const menuBtn = document.getElementById('mobile-menu-btn');
-  const navLinks = document.getElementById('nav-links');
+  const navMobile = document.getElementById('nav-mobile');
   
-  if (!menuBtn || !navLinks) return;
+  if (!menuBtn || !navMobile) return;
   
   menuBtn.addEventListener('click', function() {
-    const isActive = navLinks.classList.contains('mobile-active');
+    const isHidden = navMobile.classList.contains('hidden');
     
-    if (isActive) {
-      navLinks.classList.remove('mobile-active');
-      menuBtn.classList.remove('active');
-      menuBtn.setAttribute('aria-label', 'Abrir menú');
-    } else {
-      navLinks.classList.add('mobile-active');
-      menuBtn.classList.add('active');
+    if (isHidden) {
+      navMobile.classList.remove('hidden');
       menuBtn.setAttribute('aria-label', 'Cerrar menú');
+    } else {
+      navMobile.classList.add('hidden');
+      menuBtn.setAttribute('aria-label', 'Abrir menú');
     }
     
     // Toggle icon visibility
@@ -58,10 +48,9 @@ function initMobileMenu() {
   });
   
   // Close menu when clicking on a link
-  navLinks.querySelectorAll('a').forEach(function(link) {
+  navMobile.querySelectorAll('a').forEach(function(link) {
     link.addEventListener('click', function() {
-      navLinks.classList.remove('mobile-active');
-      menuBtn.classList.remove('active');
+      navMobile.classList.add('hidden');
       
       const menuIcon = menuBtn.querySelector('.menu-icon');
       const closeIcon = menuBtn.querySelector('.close-icon');
@@ -70,6 +59,8 @@ function initMobileMenu() {
         menuIcon.classList.remove('hidden');
         closeIcon.classList.add('hidden');
       }
+      
+      menuBtn.setAttribute('aria-label', 'Abrir menú');
     });
   });
 }
@@ -89,7 +80,8 @@ function initSmoothScroll() {
       if (target) {
         e.preventDefault();
         
-        const headerHeight = document.getElementById('header')?.offsetHeight || 72;
+        const header = document.getElementById('header');
+        const headerHeight = header ? header.offsetHeight : 80;
         const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
         
         window.scrollTo({
@@ -108,50 +100,46 @@ function initFAQ() {
   const faqItems = document.querySelectorAll('.faq-item');
   
   faqItems.forEach(function(item) {
-    const trigger = item.querySelector('.faq-trigger');
+    const question = item.querySelector('.faq-question');
     
-    if (!trigger) return;
+    if (!question) return;
     
-    trigger.addEventListener('click', function() {
-      const isActive = item.classList.contains('active');
+    question.addEventListener('click', function() {
+      const isOpen = item.classList.contains('open');
       
       // Close all other items
       faqItems.forEach(function(otherItem) {
         if (otherItem !== item) {
-          otherItem.classList.remove('active');
-          const otherTrigger = otherItem.querySelector('.faq-trigger');
-          if (otherTrigger) {
-            otherTrigger.setAttribute('aria-expanded', 'false');
+          otherItem.classList.remove('open');
+          const otherQuestion = otherItem.querySelector('.faq-question');
+          if (otherQuestion) {
+            otherQuestion.setAttribute('aria-expanded', 'false');
           }
         }
       });
       
       // Toggle current item
-      if (isActive) {
-        item.classList.remove('active');
-        trigger.setAttribute('aria-expanded', 'false');
+      if (isOpen) {
+        item.classList.remove('open');
+        question.setAttribute('aria-expanded', 'false');
       } else {
-        item.classList.add('active');
-        trigger.setAttribute('aria-expanded', 'true');
+        item.classList.add('open');
+        question.setAttribute('aria-expanded', 'true');
       }
     });
   });
 }
 
 /**
- * Scroll Animations
+ * Scroll Animations with Intersection Observer
  */
 function initScrollAnimations() {
   const animatedElements = document.querySelectorAll(
-    '.tipo-card, .ventaja-card, .sv-card, .proceso-step, .faq-item'
+    '.tipo-card, .ventaja-card, .proceso-step, .faq-item, .sv-card'
   );
   
-  // Add animation class
-  animatedElements.forEach(function(el) {
-    el.classList.add('animate-fade-in');
-  });
+  if (animatedElements.length === 0) return;
   
-  // Intersection Observer for animations
   const observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) {
@@ -177,8 +165,6 @@ function initHeaderScroll() {
   
   if (!header) return;
   
-  let lastScroll = 0;
-  
   window.addEventListener('scroll', function() {
     const currentScroll = window.pageYOffset;
     
@@ -187,22 +173,5 @@ function initHeaderScroll() {
     } else {
       header.style.boxShadow = 'none';
     }
-    
-    lastScroll = currentScroll;
   }, { passive: true });
-}
-
-/**
- * Utility: Debounce function
- */
-function debounce(func, wait) {
-  let timeout;
-  return function executedFunction(...args) {
-    const later = function() {
-      clearTimeout(timeout);
-      func(...args);
-    };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
 }

@@ -34,32 +34,46 @@
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 
     <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="./css/dominios.css">
 </head>
 
 <body>
     <!-- Header -->
     <header class="header" id="header">
-        <div class="container">
-            <nav class="nav">
-                <a href="/" class="logo">
-                    <span class="logo-text">Dev Domain Masters</span>
-                </a>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">DDM</div>
+                <span class="logo-text">Dev Domain Masters</span>
+            </a>
 
-                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú">
-                    <i data-lucide="menu" class="menu-icon"></i>
-                    <i data-lucide="x" class="close-icon hidden"></i>
-                </button>
-
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="/">Inicio</a></li>
-                    <li><a href="/dominios" class="active">Dominios</a></li>
-                    <li><a href="/hosting">Hosting</a></li>
-                    <li><a href="/#servicios">Servicios</a></li>
-                    <li><a href="/#contacto">Contacto</a></li>
-                </ul>
+            <nav class="nav-desktop">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="dominios.html" class="nav-link active" >Dominios</a>
+                <a href="hosting.html" class="nav-link">Hosting</a>
+                <a href="index.html#servicios" class="nav-link">Servicios</a>
+                <a href="index.html#contacto" class="nav-link">Contacto</a>
             </nav>
+
+            <a href="https://wa.me/50370000000" target="_blank" rel="noopener noreferrer" class="btn btn-primary nav-cta">Cotizar ahora</a>
+
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú">
+                <i data-lucide="menu" class="menu-icon"></i>
+                <i data-lucide="x" class="close-icon hidden"></i>
+            </button>
         </div>
+
+        <!-- Mobile Menu -->
+        <nav class="nav-mobile hidden" id="nav-mobile">
+            <div class="container">
+                <a href="index.html" class="nav-link-mobile">Inicio</a>
+                <a href="dominios.html" class="nav-link-mobile active">Dominios</a>
+                <a href="hosting.html" class="nav-link-mobile">Hosting</a>
+                <a href="index.html#servicios" class="nav-link-mobile">Servicios</a>
+                <a href="index.html#contacto" class="nav-link-mobile">Contacto</a>
+                
+            </div>
+        </nav>
     </header>
 
     <main>
@@ -80,13 +94,13 @@
                         con gestión DNS completa, renovación automática y soporte técnico real en español.
                     </p>
 
-                    <div class="hero-ctas">
-                        <a href="#contacto-dominios" class="btn btn-primary">
+                    <div class="hero-buttons">
+                        <a href="#contacto-dominios" class="btn btn-primary btn-lg btn-glow">
                             Consultar disponibilidad
                             <i data-lucide="arrow-right"></i>
                         </a>
-                        <a href="https://wa.me/+50377926261" target="_blank" rel="noopener noreferrer"
-                            class="btn btn-outline">
+                        <a href="https://wa.me/50370000000" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-outline btn-lg">
                             <i data-lucide="message-circle"></i>
                             Hablar con un asesor
                         </a>
@@ -94,15 +108,15 @@
 
                     <div class="trust-indicators">
                         <div class="trust-item">
-                            <i data-lucide="globe"></i>
+                            <i data-lucide="globe" class="trust-icon"></i>
                             <span>+50 extensiones</span>
                         </div>
                         <div class="trust-item">
-                            <i data-lucide="shield"></i>
+                            <i data-lucide="shield" class="trust-icon"></i>
                             <span>Gestión DNS incluida</span>
                         </div>
                         <div class="trust-item">
-                            <i data-lucide="headphones"></i>
+                            <i data-lucide="headphones" class="trust-icon"></i>
                             <span>Soporte en español</span>
                         </div>
                     </div>
@@ -111,7 +125,7 @@
         </section>
 
         <!-- Intro Section -->
-        <section class="section bg-background">
+        <section class="section">
             <div class="container">
                 <div class="intro-content">
                     <h2 class="section-title">
@@ -142,7 +156,7 @@
         </section>
 
         <!-- Tipos de Dominios -->
-        <section class="section bg-secondary">
+        <section class="section section-alt">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">
@@ -210,7 +224,7 @@
         </section>
 
         <!-- Ventajas -->
-        <section class="section bg-background">
+        <section class="section">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">
@@ -267,103 +281,55 @@
                             tu@tuempresa.com para mayor credibilidad.
                         </p>
                     </div>
-
-                    <div class="ventaja-card">
-                        <div class="ventaja-icon">
-                            <i data-lucide="shield"></i>
-                        </div>
-                        <h3 class="ventaja-title">Protección WHOIS</h3>
-                        <p class="ventaja-description">
-                            Mantén tus datos personales privados. Ofrecemos protección de privacidad
-                            para tu información de registro.
-                        </p>
-                    </div>
-
-                    <div class="ventaja-card">
-                        <div class="ventaja-icon">
-                            <i data-lucide="zap"></i>
-                        </div>
-                        <h3 class="ventaja-title">Activación Inmediata</h3>
-                        <p class="ventaja-description">
-                            Tu dominio activo en minutos. Proceso de registro rápido y sin
-                            burocracia innecesaria.
-                        </p>
-                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Dominios .SV -->
-        <section class="section bg-secondary">
+        <section class="section section-alt">
             <div class="container">
-                <div class="sv-grid">
-                    <div class="sv-content">
-                        <div class="sv-badge">
-                            <i data-lucide="map-pin"></i>
-                            <span>Identidad Local</span>
-                        </div>
-
-                        <h2 class="section-title text-left">
+                <div class="sv-content">
+                    <div class="sv-text-content">
+                        <h2 class="sv-title">
                             Dominios <span class="text-gradient">.SV</span> en El Salvador
                         </h2>
-
-                        <div class="sv-text">
-                            <p>
-                                Los dominios con extensión .sv identifican inmediatamente a tu negocio como parte
-                                del ecosistema empresarial salvadoreño. Para empresas que operan principalmente
-                                en El Salvador, un dominio .sv o .com.sv transmite compromiso con el mercado local.
-                            </p>
-                            <p>
-                                Desde pequeños negocios hasta corporaciones establecidas, un dominio .sv genera
-                                confianza en clientes que buscan proveedores locales. Además, puede mejorar tu
-                                posicionamiento en búsquedas realizadas desde El Salvador.
-                            </p>
-                            <p>
-                                Te guiamos en todo el proceso de registro de dominios .sv, cumpliendo con los
-                                requisitos de SVNet y asegurando que tu dominio esté correctamente configurado
-                                desde el primer día.
-                            </p>
-                        </div>
+                        <p class="sv-description">
+                            Los dominios con extensión .sv identifican inmediatamente a tu negocio como parte
+                            del ecosistema empresarial salvadoreño. Para empresas que operan principalmente
+                            en El Salvador, un dominio .sv o .com.sv transmite compromiso con el mercado local.
+                        </p>
+                        <ul class="sv-features">
+                            <li class="sv-feature">
+                                <i data-lucide="check-circle" class="sv-feature-icon"></i>
+                                <span>Mejor posicionamiento en búsquedas locales de Google</span>
+                            </li>
+                            <li class="sv-feature">
+                                <i data-lucide="check-circle" class="sv-feature-icon"></i>
+                                <span>Mayor confianza de clientes salvadoreños</span>
+                            </li>
+                            <li class="sv-feature">
+                                <i data-lucide="check-circle" class="sv-feature-icon"></i>
+                                <span>Disponibilidad de nombres que ya no existen en .com</span>
+                            </li>
+                            <li class="sv-feature">
+                                <i data-lucide="check-circle" class="sv-feature-icon"></i>
+                                <span>Cumplimiento con requisitos de SVNet incluido</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/50370000000" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-primary btn-glow">
+                            Registrar dominio .SV
+                            <i data-lucide="arrow-right"></i>
+                        </a>
                     </div>
 
-                    <div class="sv-cards">
+                    <div class="sv-visual">
                         <div class="sv-card">
                             <div class="sv-card-icon">
-                                <i data-lucide="trending-up"></i>
+                                <i data-lucide="map-pin"></i>
                             </div>
-                            <div class="sv-card-content">
-                                <h3>Mejor SEO Local</h3>
-                                <p>
-                                    Los buscadores pueden priorizar dominios .sv para usuarios en El Salvador,
-                                    mejorando tu visibilidad en búsquedas locales.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="sv-card">
-                            <div class="sv-card-icon">
-                                <i data-lucide="users"></i>
-                            </div>
-                            <div class="sv-card-content">
-                                <h3>Confianza del Cliente</h3>
-                                <p>
-                                    Los consumidores salvadoreños reconocen y confían en dominios locales,
-                                    especialmente para transacciones comerciales.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="sv-card">
-                            <div class="sv-card-icon">
-                                <i data-lucide="check-circle"></i>
-                            </div>
-                            <div class="sv-card-content">
-                                <h3>Disponibilidad de Nombres</h3>
-                                <p>
-                                    Mayor probabilidad de encontrar el nombre exacto de tu empresa disponible
-                                    en extensión .sv que en .com.
-                                </p>
-                            </div>
+                            <h3 class="sv-card-title">.com.sv</h3>
+                            <p class="sv-card-subtitle">Extensión oficial de El Salvador</p>
                         </div>
                     </div>
                 </div>
@@ -371,7 +337,7 @@
         </section>
 
         <!-- Proceso -->
-        <section class="section bg-background">
+        <section class="section">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">
@@ -383,59 +349,68 @@
                     </p>
                 </div>
 
-                <div class="proceso-timeline">
-                    <div class="proceso-line"></div>
-
+                <div class="proceso-grid">
                     <div class="proceso-step">
-                        <div class="proceso-card">
+                        <div class="proceso-icon-wrapper">
+                            <div class="proceso-icon-box">
+                                <i data-lucide="search"></i>
+                            </div>
                             <div class="proceso-number">01</div>
-                            <h3>Consulta de Disponibilidad</h3>
-                            <p>
-                                Verificamos si el dominio que deseas está disponible. Te sugerimos alternativas
-                                si ya está registrado y te asesoramos sobre la mejor extensión para tu negocio.
-                            </p>
                         </div>
-                        <div class="proceso-icon">
-                            <i data-lucide="search"></i>
-                        </div>
-                        <div class="proceso-spacer"></div>
-                    </div>
-
-                    <div class="proceso-step reverse">
-                        <div class="proceso-spacer"></div>
-                        <div class="proceso-icon">
-                            <i data-lucide="file-check"></i>
-                        </div>
-                        <div class="proceso-card">
-                            <div class="proceso-number">02</div>
-                            <h3>Registro y Configuración</h3>
-                            <p>
-                                Procesamos el registro de tu dominio con todos los datos correctos. Configuramos
-                                los registros DNS básicos y te entregamos las credenciales de acceso a tu panel.
-                            </p>
-                        </div>
+                        <h3 class="proceso-title">Consulta</h3>
+                        <p class="proceso-description">
+                            Verificamos la disponibilidad del dominio que deseas y te sugerimos
+                            alternativas si es necesario.
+                        </p>
                     </div>
 
                     <div class="proceso-step">
-                        <div class="proceso-card">
+                        <div class="proceso-icon-wrapper">
+                            <div class="proceso-icon-box">
+                                <i data-lucide="file-check"></i>
+                            </div>
+                            <div class="proceso-number">02</div>
+                        </div>
+                        <h3 class="proceso-title">Registro</h3>
+                        <p class="proceso-description">
+                            Procesamos el registro con todos los datos correctos y configuramos
+                            los registros DNS básicos.
+                        </p>
+                    </div>
+
+                    <div class="proceso-step">
+                        <div class="proceso-icon-wrapper">
+                            <div class="proceso-icon-box">
+                                <i data-lucide="settings"></i>
+                            </div>
                             <div class="proceso-number">03</div>
-                            <h3>Activación y Soporte</h3>
-                            <p>
-                                Tu dominio queda activo y listo para usar. Te ayudamos a conectarlo con tu hosting,
-                                correo empresarial o cualquier servicio que necesites integrar.
-                            </p>
                         </div>
-                        <div class="proceso-icon">
-                            <i data-lucide="zap"></i>
+                        <h3 class="proceso-title">Configuración</h3>
+                        <p class="proceso-description">
+                            Te entregamos acceso al panel de control y configuramos tu dominio
+                            según tus necesidades.
+                        </p>
+                    </div>
+
+                    <div class="proceso-step">
+                        <div class="proceso-icon-wrapper">
+                            <div class="proceso-icon-box">
+                                <i data-lucide="zap"></i>
+                            </div>
+                            <div class="proceso-number">04</div>
                         </div>
-                        <div class="proceso-spacer"></div>
+                        <h3 class="proceso-title">Activación</h3>
+                        <p class="proceso-description">
+                            Tu dominio queda activo y listo. Te ayudamos a conectarlo con hosting
+                            o correo empresarial.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- FAQ -->
-        <section id="faq-dominios" class="section bg-secondary">
+        <section id="faq-dominios" class="section section-alt">
             <div class="container container-narrow">
                 <div class="section-header">
                     <h2 class="section-title">
@@ -448,90 +423,71 @@
 
                 <div class="faq-list">
                     <div class="faq-item">
-                        <button class="faq-trigger" aria-expanded="false">
+                        <button class="faq-question" aria-expanded="false">
                             <span>¿Qué incluye el registro de un dominio?</span>
                             <i data-lucide="chevron-down" class="faq-icon"></i>
                         </button>
-                        <div class="faq-content">
+                        <div class="faq-answer">
                             <p>
-                                El registro incluye el derecho de uso exclusivo del nombre de dominio por el
-                                período contratado (generalmente 1 año), acceso a panel de gestión DNS,
-                                configuración de registros básicos y soporte técnico. Dependiendo del plan,
-                                puede incluir también protección de privacidad WHOIS.
+                                El registro incluye el derecho de uso del dominio por el período contratado,
+                                acceso completo al panel de gestión DNS, configuración inicial de registros,
+                                y soporte técnico en español para cualquier consulta o configuración adicional.
                             </p>
                         </div>
                     </div>
 
                     <div class="faq-item">
-                        <button class="faq-trigger" aria-expanded="false">
+                        <button class="faq-question" aria-expanded="false">
                             <span>¿Puedo transferir mi dominio desde otro proveedor?</span>
                             <i data-lucide="chevron-down" class="faq-icon"></i>
                         </button>
-                        <div class="faq-content">
+                        <div class="faq-answer">
                             <p>
-                                Sí, puedes transferir tu dominio a Dev Domain Masters. El proceso requiere
-                                que tu dominio tenga más de 60 días registrado y que obtengas el código de
-                                autorización (EPP) de tu proveedor actual. Te guiamos en todo el proceso
-                                sin costo adicional por la transferencia.
+                                Sí, realizamos transferencias de dominios desde cualquier registrador.
+                                El proceso incluye la migración completa de configuraciones DNS y verificación
+                                de que todo funcione correctamente antes de finalizar la transferencia.
                             </p>
                         </div>
                     </div>
 
                     <div class="faq-item">
-                        <button class="faq-trigger" aria-expanded="false">
+                        <button class="faq-question" aria-expanded="false">
                             <span>¿El dominio incluye correo empresarial?</span>
                             <i data-lucide="chevron-down" class="faq-icon"></i>
                         </button>
-                        <div class="faq-content">
+                        <div class="faq-answer">
                             <p>
-                                El registro del dominio por sí solo no incluye correo electrónico, pero una
-                                vez registrado puedes agregar nuestro servicio de correo empresarial para
-                                tener direcciones como tu@tudominio.com. También puedes conectar servicios
-                                externos como Google Workspace.
+                                El registro de dominio no incluye cuentas de correo, pero permite configurar
+                                cualquier servicio de correo empresarial. Ofrecemos paquetes de correo profesional
+                                que puedes agregar a tu dominio para tener direcciones como tu@tuempresa.com.
                             </p>
                         </div>
                     </div>
 
                     <div class="faq-item">
-                        <button class="faq-trigger" aria-expanded="false">
+                        <button class="faq-question" aria-expanded="false">
                             <span>¿Qué pasa si mi dominio vence?</span>
                             <i data-lucide="chevron-down" class="faq-icon"></i>
                         </button>
-                        <div class="faq-content">
+                        <div class="faq-answer">
                             <p>
-                                Si tu dominio vence, entra en un período de gracia donde aún puedes renovarlo
-                                (generalmente 30 días). Después pasa a un período de redención con costos
-                                adicionales. Finalmente, si no se renueva, queda disponible para que cualquier
-                                persona lo registre. Recomendamos activar la renovación automática.
+                                Te enviamos recordatorios antes del vencimiento. Si el dominio expira,
+                                existe un período de gracia para renovarlo sin perderlo. Recomendamos activar
+                                la renovación automática para evitar cualquier interrupción en tu servicio.
                             </p>
                         </div>
                     </div>
 
                     <div class="faq-item">
-                        <button class="faq-trigger" aria-expanded="false">
-                            <span>¿Cómo registro un dominio .sv?</span>
+                        <button class="faq-question" aria-expanded="false">
+                            <span>¿Cuánto tarda en activarse un dominio nuevo?</span>
                             <i data-lucide="chevron-down" class="faq-icon"></i>
                         </button>
-                        <div class="faq-content">
+                        <div class="faq-answer">
                             <p>
-                                Los dominios .sv son administrados por SVNet en El Salvador. Te ayudamos con
-                                el proceso de registro cumpliendo todos los requisitos necesarios. Puedes
-                                registrar extensiones como .com.sv, .org.sv, .edu.sv según el tipo de organización.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-trigger" aria-expanded="false">
-                            <span>¿Cuánto tiempo tarda en activarse mi dominio?</span>
-                            <i data-lucide="chevron-down" class="faq-icon"></i>
-                        </button>
-                        <div class="faq-content">
-                            <p>
-                                Los dominios globales (.com, .net, .org) se activan en minutos después de
-                                completar el pago y verificación. Los dominios .sv pueden tardar entre 24-48
-                                horas debido al proceso de verificación de SVNet. Te notificamos inmediatamente
-                                cuando tu dominio está listo.
+                                Los dominios .com, .net y similares se activan en minutos. Los dominios .sv
+                                pueden tomar hasta 24-48 horas debido al proceso de verificación de SVNet.
+                                Te mantenemos informado durante todo el proceso.
                             </p>
                         </div>
                     </div>
@@ -540,93 +496,86 @@
         </section>
 
         <!-- CTA Final -->
-        <section id="contacto-dominios" class="section bg-background">
+        <section id="contacto-dominios" class="cta-section">
+            <div class="cta-glow cta-glow-1"></div>
+            <div class="cta-glow cta-glow-2"></div>
+
             <div class="container">
-                <div class="cta-box">
-                    <div class="cta-glow"></div>
-                    <div class="cta-content">
-                        <h2 class="cta-title">
-                            ¿Listo para Asegurar tu <span class="text-gradient">Dominio</span>?
-                        </h2>
-                        <p class="cta-description">
-                            Tu dominio es el primer paso hacia una presencia digital profesional.
-                            Contáctanos hoy y te ayudamos a encontrar el nombre perfecto para tu proyecto.
-                        </p>
-                        <div class="cta-buttons">
-                            <a href="/#contacto" class="btn btn-primary btn-lg">
-                                Solicitar registro de dominio
-                                <i data-lucide="arrow-right"></i>
-                            </a>
-                            <a href="https://wa.me/+50377926261" target="_blank" rel="noopener noreferrer"
-                                class="btn btn-outline btn-lg">
-                                <i data-lucide="message-circle"></i>
-                                Consultar por WhatsApp
-                            </a>
-                        </div>
+                <div class="cta-content">
+                    <h2 class="cta-title">
+                        ¿Listo para Asegurar tu <span class="text-gradient">Dominio</span>?
+                    </h2>
+                    <p class="cta-description">
+                        Consulta la disponibilidad del dominio que deseas y recibe asesoría personalizada
+                        para elegir la mejor opción para tu negocio.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="https://wa.me/50370000000?text=Hola,%20quiero%20consultar%20la%20disponibilidad%20de%20un%20dominio"
+                            target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg btn-glow">
+                            <i data-lucide="message-circle"></i>
+                            Consultar por WhatsApp
+                        </a>
+                        <a href="mailto:info@devdomainmasters.com" class="btn btn-outline btn-lg">
+                            <i data-lucide="mail"></i>
+                            Enviar correo
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="/" class="logo">
-                        <span class="logo-text">Dev Domain Masters</span>
-                    </a>
-                    <p class="footer-tagline">
-                        Soluciones digitales profesionales para empresas en El Salvador.
-                    </p>
-                </div>
-
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Servicios</h4>
-                        <ul>
-                            <li><a href="/dominios">Registro de Dominios</a></li>
-                            <li><a href="/hosting">Hosting Profesional</a></li>
-                            <li><a href="/#servicios">Desarrollo Web</a></li>
-                            <li><a href="/#servicios">Correo Empresarial</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-column">
-                        <h4>Empresa</h4>
-                        <ul>
-                            <li><a href="/#nosotros">Sobre Nosotros</a></li>
-                            <li><a href="/#contacto">Contacto</a></li>
-                            <li><a href="/dominios#faq-dominios">Preguntas Frecuentes</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-column">
-                        <h4>Contacto</h4>
-                        <ul>
-                            <li>
-                                <a href="https://wa.me/++50377926261" target="_blank" rel="noopener noreferrer">
-                                    <i data-lucide="message-circle"></i>
-                                    WhatsApp
-                                </a>
-                            </li>
-                            <li>
-                                <a href="mailto:info@devdomainmasters.com">
-                                    <i data-lucide="mail"></i>
-                                    info@devdomainmasters.com
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <div class="logo-icon">DD</div>
+                    <span class="logo-text">DEV DOMAIN <span class="text-gradient">MASTERS</span></span>
+                </a>
+                <p class="footer-description">
+                    Tu aliado tecnológico en El Salvador. Hosting, dominios y
+                    desarrollo web con soporte real.
+                </p>
             </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2024 Dev Domain Masters. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <h4 class="footer-title">Servicios</h4>
+                <ul>
+                    <li><a href="#servicios">Hosting Web</a></li>
+                    <li><a href="hosting.html">Dominios</a></li>
+                    <li><a href="#servicios">Correos Empresariales</a></li>
+                    <li><a href="#servicios">Desarrollo Web</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4 class="footer-title">Empresa</h4>
+                <ul>
+                    <li><a href="#nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#proceso">Proceso</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4 class="footer-title">Contacto</h4>
+                <ul>
+                    <li>
+                        <a href="mailto:hola@devdomainmasters.com">hola@devdomainmasters.com</a>
+                    </li>
+                    <li><a href="https://wa.me/50312345678">+503 1234-5678</a></li>
+                    <li>San Salvador, El Salvador</li>
+                </ul>
             </div>
         </div>
-    </footer>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> Dev Domain Masters. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
 
     <script src="./js/dominios.js"></script>
 </body>
