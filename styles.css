@@ -289,7 +289,7 @@ a.withouta {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: 5rem;
+    padding-top: 3rem;
     background: var(--gradient-hero);
     overflow: hidden;
 }
