@@ -175,6 +175,12 @@ a.withouta {
     text-decoration: none;
 }
 
+.logo-header {
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+}
+
 .logo-icon {
     width: 2rem;
     height: 2rem;
