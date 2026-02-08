@@ -1011,6 +1011,11 @@ color: var(--primary);
     font-size: 0.875rem;
     color: var(--muted-foreground);
 }
+.logo-header {
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+}
 
 /* -------------------- RESPONSIVE -------------------- */
 @media (max-width: 640px) {
