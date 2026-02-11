@@ -3,77 +3,77 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
     <title>
       Hosting Profesional, Dominios y Desarrollo Web en El Salvador | Dev Domain Masters
     </title>
-    <meta
-      name="description"
-      content="Servicios profesionales de hosting, dominios y desarrollo web en El Salvador. Infraestructura confiable, soporte técnico real y soluciones para empresas y emprendedores."
-    />
-    <meta
-      name="keywords"
-      content="hosting El Salvador, dominios sv, desarrollo web, correo empresarial, hosting profesional"
-    />
-    <meta name="author" content="Dev Domain Masters" />
+  
+    <meta name="description"
+      content="Servicios profesionales de hosting, dominios y desarrollo web en El Salvador. Infraestructura confiable, soporte técnico real y soluciones para empresas y emprendedores." />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://devdomainmasters.com" />
-
-    <!-- Open Graph -->
-    <meta
-      property="og:title"
-      content="Dev Domain Masters | Hosting y Desarrollo Web"
-    />
-    <meta
-      property="og:description"
-      content="Servicios profesionales de hosting, dominios y desarrollo web en El Salvador."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="es_SV" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@DevDomainMasters" />
-
-    <!-- Fonts -->   
-    <link rel="preload" href="assets/fonts/inter-v20-latin-800.woff2" as="font" type="font/woff2" crossorigin />
-
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest" defer></script>
-
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/png" href="assets/icon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="assets/icon/favicon.svg" />
-    <link rel="shortcut icon" href="assets/icon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/apple-touch-icon.png" />
-    <link rel="manifest" href="assets/icon/site.webmanifest" />
-    
+  
+    <!-- 🔥 Preload crítico primero -->
+    <link rel="preload" href="/assets/fonts/inter-v20-latin-800.woff2" as="font" type="font/woff2" crossorigin />
+  
+    <link rel="preload" href="/styles.css" as="style" />
+  
+    <!-- Critical CSS inline -->
+    <style>
+      body {
+        font-family: 'Inter', system-ui, sans-serif;
+        margin: 0;
+        background: #0b0f1a;
+        color: #fff;
+      }
+  
+      .hero {
+        padding: 4rem 1.5rem;
+      }
+  
+      .hero-title {
+        font-size: 2.25rem;
+        font-weight: 800;
+        line-height: 1.2;
+      }
+    </style>
+  
+    <!-- Load full CSS after -->
+    <link rel="stylesheet" href="/styles.css" media="print" onload="this.media='all'">
+    <noscript>
+      <link rel="stylesheet" href="/styles.css">
+    </noscript>
+  
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/assets/icon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/icon/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/icon/site.webmanifest" />
+  
+    <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Dev Domain Masters",
       "url": "https://devdomainmasters.com",
-      "logo": "https://devdomainmasters.com/logo.png",
+      "logo": "https://devdomainmasters.com/assets/logoddm.svg",
+      "description": "Servicios profesionales de hosting, dominios y desarrollo web en El Salvador.
+       Infraestructura confiable, soporte técnico real y soluciones para empresas y emprendedores.",
       "contactPoint": {
         "@type": "ContactPoint",
-        "contactType": "customer support",
-        "email": "hola@devdomainmasters.com",
-        "telephone": "+50312345678",
-        "areaServed": "SV",
-        "availableLanguage": ["Spanish"]
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "SV",
-        "addressLocality": "San Salvador"
-      },
-      "sameAs": []
+        "telephone": "+50377926261",
+        "contactType": "customer service",
+        "areaServed": "SV"
     }
     </script>
-
+  
+    <!-- ⚠️ Eliminar CDN de Lucide -->
+    <!-- Mejor: usar SVG inline o archivo local defer -->
   </head>
+
+
+  
   <body>
     <!-- Header -->
     <header class="header">
