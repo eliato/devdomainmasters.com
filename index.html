@@ -38,7 +38,8 @@
     <link rel="preload" href="assets/fonts/inter-800.woff2" as="font" type="font/woff2" crossorigin />
 
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css" />
@@ -77,9 +78,10 @@
     <!-- Header -->
     <header class="header">
       <div class="container header-container">
-        <a href="/index">
-          <img src="assets/logoddm.svg" alt="" class="logo-header">
+       <a href="/index" aria-label="Inicio - Dev Domain Masters">
+          <img src="assets/logoddm.svg" alt="Dev Domain Masters">
         </a>
+
 
         <nav class="nav-desktop" aria-label="Navegación principal">
           <a href="/index" class="nav-link active">Inicio</a>
@@ -610,7 +612,7 @@
           </div>
 
           <div class="footer-links">
-            <h4 class="footer-title">Servicios</h4>
+            <h3 class="footer-title">Servicios</h3>
             <ul>
               <li><a href="#servicios">Hosting Web</a></li>
               <li><a href="hosting.html">Dominios</a></li>
@@ -620,7 +622,7 @@
           </div>
 
           <div class="footer-links">
-            <h4 class="footer-title">Empresa</h4>
+            <h3 class="footer-title">Empresa</h3>
             <ul>
               <li><a href="#nosotros">Sobre Nosotros</a></li>
               <li><a href="#proceso">Proceso</a></li>
@@ -629,7 +631,7 @@
           </div>
 
           <div class="footer-links">
-            <h4 class="footer-title">Contacto</h4>
+            <h3 class="footer-title">Contacto</h3>
             <ul>
               <li>
                 <a href="mailto:hola@devdomainmasters.com"
